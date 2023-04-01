@@ -14,18 +14,22 @@ class ToucanDiscipline(Enum):
     The pattern on how to process each line of the files for each
     discipline match is stored here. The values in each enum are as
     follows:
-        * Enum ID.
-        * Regex for processing each player's contribution in a match.
-          Assumed conditions:
-          - Name, nickname and team name can be anything.
-          - Match statistics (scores, rebounds etc.) MUST be a number.
-          - Player number MUST be a number.
-          - Player position MUST be a letter.
-        * Dictionary containing the "evaluation" as a function of the position.
-        * Location in which the points are stored inside the evaluation and whether
-          the points contributed are considered as an addition or subtraction
-          (e.g. goal made or goal received).
-        * Extra rating points (e.g. initial).
+
+    1. Enum ID.
+    2. Regex for processing each player's contribution in a match.
+       Assumed conditions:
+
+        * Name, nickname and team name can be anything.
+        * Match statistics (scores, rebounds etc.) MUST be a number.
+        * Player number MUST be a number.
+        * Player position MUST be a letter.
+
+    3. Dictionary containing the "evaluation" as a function of the position.
+    4. Location in which the points are stored inside the evaluation and whether
+       the points contributed are considered as an addition or subtraction
+       (e.g. goal made or goal received).
+    5. Extra rating points (e.g. initial).
+
     """
 
     # TODO: force regex to be numbers or letters

@@ -14,7 +14,6 @@ html_short_title = html_title = project
 # specify the location of your github repo
 html_theme_options = {
     "show_prev_next": False,
-    "show_breadcrumbs": True,
 }
 
 # Sphinx extensions
