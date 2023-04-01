@@ -12,4 +12,4 @@ class ToucanException(Exception):
         msg : str, optional
             The message to be raised, by default "".
         """
-        Exception.__init__(self, msg="")
+        Exception.__init__(self, msg)

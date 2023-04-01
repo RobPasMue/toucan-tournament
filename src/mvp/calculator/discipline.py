@@ -84,9 +84,9 @@ def get_discipline_by_name(name: str) -> ToucanDiscipline:
         The ToucanDiscipline enum.
     """
     for discipline in ToucanDiscipline:
-        if name.capitalize() == discipline.name:
+        if name.upper() == discipline.name:
             return discipline
 
-    return ToucanException(
+    raise ToucanException(
         f"The provided discipline name '{name}' is not implemented. Consider adding it to the ToucanDiscipline enum class."  # noqa : E501
     )

@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        // Disable cov to allow breakpoints when launched from VS Code Python
+        "name": "Python: Debug Tests",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "purpose": ["debug-test"],
+        "console": "internalConsole",
+        "justMyCode": false,
+        "presentation": {
+          "hidden": true
+        },
+        "env": {
+          "PYTEST_ADDOPTS": "--no-cov",
+        }
+      }
+    ]
+  }
