@@ -68,7 +68,7 @@ class ToucanTournament:
         """
         # First of all, check that the provided argument is actually
         # a directory. Otherwise raise an error.
-        dir_as_path = dir if isinstance(Path) else Path(dir)
+        dir_as_path = dir if isinstance(dir, Path) else Path(dir)
         if not dir_as_path.is_dir():
             raise ToucanException(f"The provided directory path {dir} is not a directory.")
 
@@ -106,7 +106,7 @@ class ToucanTournament:
         """
         with open(filepath, "r") as file:
             # Read the file
-            lines = file.readlines()
+            lines = file.read().splitlines()
 
             # Read the first line to get the sport/discipline
             discipline = get_discipline_by_name(lines[0])
@@ -125,7 +125,8 @@ class ToucanTournament:
                         f"Failed to process tournament... error on match file '{filepath}'"
                     )
                 else:
-                    name, nickname, _, team, position, marks = entries
+                    name, nickname, _, team, position, *marks = entries.groups()
+                    marks = [int(mark) for mark in marks]  # Reassign to integers
 
                 # Check if player exists, otherwise create it
                 player = self._players.get(nickname)
@@ -133,7 +134,7 @@ class ToucanTournament:
                     player = self._players[nickname] = ToucanPlayer(name, nickname)
 
                 # Check if the team has already been processed or not... if not, initialize it
-                if team in teams.keys():
+                if not team in teams.keys():
                     teams[team] = 0
                     player_teams[team] = []
 
@@ -152,5 +153,5 @@ class ToucanTournament:
                 [winner_player.add_bonus_points() for winner_player in player_teams[team_a]]
             elif team_a_score < team_b_score:
                 [winner_player.add_bonus_points() for winner_player in player_teams[team_b]]
-            else:
+            else:  # pragma: no cover
                 raise Exception("Matches cannot end in a draw. Invalid tournament.")
