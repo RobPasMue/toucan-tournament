@@ -22,6 +22,13 @@ def test_ref_tournament():
     assert tournament.mvp.nickname == "nick3"
     assert tournament.mvp.total_points == 72
 
+    ref_str = """Player
+......
+Name:        player 3
+Nickname:    nick3
+Points:      72"""
+    assert str(tournament.mvp) == ref_str
+
 
 def test_invalid_data_path():
     # Let's assume we give a file as data path... this should throw an error

@@ -140,3 +140,19 @@ class ToucanPlayer:
     def add_bonus_points(self) -> None:
         """Add bonus points (i.e. 10) to the last match the player has played."""
         self._points[-1] = self._points[-1] + 10
+
+    def __str__(self) -> str:
+        """Represent player information as string.
+
+        Returns
+        -------
+        str
+            String representation of the player.
+        """
+        lines = []
+        lines.append("Player")
+        lines.append("......")
+        lines.append(f"Name:        {self._name}")
+        lines.append(f"Nickname:    {self._nickname}")
+        lines.append(f"Points:      {self.total_points}")
+        return "\n".join(lines)
