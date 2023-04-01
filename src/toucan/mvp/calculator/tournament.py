@@ -3,9 +3,9 @@ from pathlib import Path
 import re
 from typing import List, Union
 
-from mvp.calculator.discipline import get_discipline_by_name
-from mvp.calculator.errors import ToucanException
-from mvp.calculator.players import ToucanPlayer
+from toucan.mvp.calculator.discipline import get_discipline_by_name
+from toucan.mvp.calculator.errors import ToucanException
+from toucan.mvp.calculator.players import ToucanPlayer
 
 
 class ToucanTournament:

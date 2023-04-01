@@ -3,7 +3,7 @@
 from enum import Enum
 from typing import Dict, Tuple
 
-from mvp.calculator.errors import ToucanException
+from toucan.mvp.calculator.errors import ToucanException
 
 
 class ToucanDiscipline(Enum):

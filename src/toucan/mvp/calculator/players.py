@@ -2,8 +2,8 @@
 
 from typing import List
 
-from mvp.calculator.discipline import ToucanDiscipline
-from mvp.calculator.errors import ToucanException
+from toucan.mvp.calculator.discipline import ToucanDiscipline
+from toucan.mvp.calculator.errors import ToucanException
 
 
 class ToucanPlayer:

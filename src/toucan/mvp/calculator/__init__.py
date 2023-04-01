@@ -14,4 +14,4 @@ __version__ = importlib_metadata.version(__name__.replace(".", "-"))
 # Ease import statements
 # ------------------------------------------------------------------------------
 
-from mvp.calculator.tournament import ToucanTournament
+from toucan.mvp.calculator.tournament import ToucanTournament

@@ -1,4 +1,4 @@
-from mvp.calculator.errors import ToucanException
+from toucan.mvp.calculator.errors import ToucanException
 
 
 def test_toucan_exception():

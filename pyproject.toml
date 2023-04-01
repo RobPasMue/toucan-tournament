@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "mvp-calculator"
+name = "toucan-mvp-calculator"
 version = "0.1.dev0"
 description = "A python library for computing the MVP of the Toucan tournament."
 readme = "README.md"
@@ -33,7 +33,7 @@ tests = [
 ]
 
 [tool.flit.module]
-name = "mvp.calculator"
+name = "toucan.mvp.calculator"
 
 [tool.black]
 line-length = 100
@@ -46,14 +46,14 @@ default_section = "THIRDPARTY"
 src_paths = ["src", "tests"]
 
 [tool.coverage.run]
-source = ["mvp.calculator"]
+source = ["toucan.mvp.calculator"]
 
 [tool.coverage.report]
 show_missing = true
 
 [tool.pytest.ini_options]
 minversion = "7.1"
-addopts = "-ra --cov=mvp.calculator --cov-report html:.cov/html --cov-report xml:.cov/xml --cov-report term"
+addopts = "-ra --cov=toucan.mvp.calculator --cov-report html:.cov/html --cov-report xml:.cov/xml --cov-report term"
 testpaths = [
     "tests",
 ]

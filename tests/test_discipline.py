@@ -1,7 +1,7 @@
 import pytest
 
-from mvp.calculator.discipline import ToucanDiscipline, get_discipline_by_name
-from mvp.calculator.errors import ToucanException
+from toucan.mvp.calculator.discipline import ToucanDiscipline, get_discipline_by_name
+from toucan.mvp.calculator.errors import ToucanException
 
 
 def test_toucan_disciplines():
