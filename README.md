@@ -4,11 +4,11 @@ This is a coding test resolution provided by
 [Roberto Pastor Muela](https://www.linkedin.com/robertopastormuela)
 for Telefónica.
 
-## Code Test - Tucan Tournament
+## Code Test - Toucan Tournament
 
 ### **Task**
 
-Tucan Tournament is a tournament where several players compete in
+Toucan Tournament is a tournament where several players compete in
 several sports.
 
 **Facts**

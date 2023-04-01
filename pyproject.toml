@@ -5,7 +5,7 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "mvp-calculator"
 version = "0.1.dev0"
-description = "A python library for computing the MVP of the Tucan tournament."
+description = "A python library for computing the MVP of the Toucan tournament."
 readme = "README.md"
 requires-python = ">=3.7,<4"
 authors = [{name = "Roberto Pastor Muela", email = "roberpm1995@gmail.com"}]
