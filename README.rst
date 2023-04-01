@@ -70,20 +70,20 @@ How to install ``toucan-mvp-calculator``
 
     .. code:: bash
 
-        python -m pip install -U pip flit tox
+        python -m pip install -U pip
 
 4. Install the project in editable mode from the root of the uncompressed directory:
 
     .. code:: bash
     
-        python -m pip install --editable .
+        python -m pip install -e .
 
 5. **EXTRA**: you can also install the test and documentation build
    requirements by running instead the following:
 
     .. code:: bash
 
-        python -m pip install --editable .[tests,doc]
+        python -m pip install -e .[tests,doc]
 
 How to run the tests
 --------------------
@@ -96,6 +96,7 @@ If you want to run the tests, just do as follows:
 
 .. code:: bash
 
+    # Install the library with tests requirements
     pip install -e .[tests]
 
     # Launch the test suite
@@ -124,6 +125,7 @@ directory of the repository:
 
 .. code:: bash
 
+   # Install the library with doc requirements
     pip install -e .[doc]
 
     # Navigate to the documentation directory
@@ -133,7 +135,7 @@ directory of the repository:
     make html
 
     # On Windows, run
-    .\\make.bat html
+    .\make.bat html
 
 After the build completes the HTML documentation locates itself in the
 ``_builds/html`` directory and you can load the ``index.html`` into a web
@@ -145,7 +147,7 @@ browser. To clean the documentation you can execute this command:
     make clean
 
     # On Windows, run
-    .\\make.bat clean
+    .\make.bat clean
 
 
 Code style

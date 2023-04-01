@@ -1,7 +1,7 @@
 Task
 ####
 
-The following statement was provided as a technical practical:
+The following statement was provided as a technical practical.
 
 Context - Toucan Tournament MVP calculator
 ==========================================
@@ -43,7 +43,9 @@ depending on his position:
 |              | Scored point  | Rebound  | Assist |
 +==============+===============+==========+========+
 | Guard (G)    | 2             | 3        | 1      |
++--------------+---------------+----------+--------+
 | Forward (F)  | 2             | 2        | 2      |
++--------------+---------------+----------+--------+
 | Center (C)   | 2             | 1        | 3      |
 +--------------+---------------+----------+--------+
 
@@ -76,6 +78,7 @@ depending on his position:
 |                   | Initial rating points | Goal made | Goal received |
 +===================+=======================+===========+===============+
 | Goalkeeper (G)    | 50                    | 5         | -2            |
++-------------------+-----------------------+-----------+---------------+
 | Field player (F)  | 20                    | 1         | -1            |
 +-------------------+-----------------------+-----------+---------------+
 
