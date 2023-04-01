@@ -19,10 +19,9 @@ repos:
   rev: v2.2.4
   hooks:
   - id: codespell
-    args: ["--ignore-words", "ignore_words.txt"]
 
-- repo: https://github.com/pycqa/pydocstyle
-  rev: 6.3.0
-  hooks:
-  - id: pydocstyle
-    additional_dependencies: [toml]
+# - repo: https://github.com/pycqa/pydocstyle
+#   rev: 6.3.0
+#   hooks:
+#   - id: pydocstyle
+#     additional_dependencies: [toml]

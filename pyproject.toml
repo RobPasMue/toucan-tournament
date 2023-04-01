@@ -58,7 +58,3 @@ addopts = "-ra --cov=mvp.calculator --cov-report html:.cov/html --cov-report xml
 testpaths = [
     "tests",
 ]
-
-[tool.codespell]
-ignore-words = "./ignore_words.txt"
-quiet-level = 3

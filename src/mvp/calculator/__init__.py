@@ -1,5 +1,5 @@
 """Pythonic library used for computing the Most Valuable Player (MVP)
-of the Tucan Tournament."""
+of the Toucan Tournament."""
 
 # Version
 # ------------------------------------------------------------------------------
@@ -10,9 +10,9 @@ except ModuleNotFoundError:  # pragma: no cover
     import importlib_metadata  # type: ignore
 
 __version__ = importlib_metadata.version(__name__.replace(".", "-"))
-"""Tucan MVP calculator library version."""
+"""Toucan MVP calculator library version."""
 
 # Ease import statements
 # ------------------------------------------------------------------------------
 
-from mvp.calculator.tournament import TucanTournament
+from mvp.calculator.tournament import ToucanTournament

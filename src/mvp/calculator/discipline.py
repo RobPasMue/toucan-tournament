@@ -1,13 +1,13 @@
-"""Module defining the different disciplines ran in the Tucan Tournament
+"""Module defining the different disciplines ran in the Toucan Tournament
 and auxiliary methods."""
 
 from enum import Enum
 from typing import Dict, Tuple
 
-from mvp.calculator.errors import TucanException
+from mvp.calculator.errors import ToucanException
 
 
-class TucanDiscipline(Enum):
+class ToucanDiscipline(Enum):
     """Provides an enum holding the different disciplines available.
 
     Notes
@@ -72,8 +72,8 @@ class TucanDiscipline(Enum):
         return self.value[3]
 
 
-def get_discipline_by_name(name: str) -> TucanDiscipline:
-    """Method for returning the TucanDiscipline enum class.
+def get_discipline_by_name(name: str) -> ToucanDiscipline:
+    """Method for returning the ToucanDiscipline enum class.
 
     Parameters
     ----------
@@ -82,13 +82,13 @@ def get_discipline_by_name(name: str) -> TucanDiscipline:
 
     Returns
     -------
-    TucanDiscipline
-        The TucanDiscipline enum.
+    ToucanDiscipline
+        The ToucanDiscipline enum.
     """
-    for discipline in TucanDiscipline:
+    for discipline in ToucanDiscipline:
         if name.capitalize() == discipline.name:
             return discipline
 
-    return TucanException(
-        f"The provided discipline name '{name}' is not implemented. Consider adding it to the TucanDiscipline enum class."  # noqa : E501
+    return ToucanException(
+        f"The provided discipline name '{name}' is not implemented. Consider adding it to the ToucanDiscipline enum class."  # noqa : E501
     )

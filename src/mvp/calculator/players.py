@@ -2,15 +2,15 @@
 
 from typing import List
 
-from mvp.calculator.discipline import TucanDiscipline
-from mvp.calculator.errors import TucanException
+from mvp.calculator.discipline import ToucanDiscipline
+from mvp.calculator.errors import ToucanException
 
 
-class TucanPlayer:
-    """Class representing a player of Tucan tournament sport."""
+class ToucanPlayer:
+    """Class representing a player of Toucan tournament sport."""
 
     def __init__(self, name: str, nickname: str) -> None:
-        """Constructor for ``TucanPlayer`` class.
+        """Constructor for ``ToucanPlayer`` class.
 
         Parameters
         ----------
@@ -68,7 +68,7 @@ class TucanPlayer:
         return sum(self._points)
 
     def add_match_points(
-        self, marks: List[int], discipline: TucanDiscipline, position: str
+        self, marks: List[int], discipline: ToucanDiscipline, position: str
     ) -> None:
         """Computes the number of points acquired in a match and stores them
         inside the player's record track (i.e. self._points).
@@ -77,7 +77,7 @@ class TucanPlayer:
         ----------
         evaluation : List[int]
             Marks obtained during the match.
-        discipline : TucanDiscipline
+        discipline : ToucanDiscipline
             Sports discipline in which the marks were obtained.
         position : str
             Player's position in the match.
@@ -85,27 +85,27 @@ class TucanPlayer:
         # Get the evaluation parameters for the given discipline and player's position
         eval_params = discipline.get_eval_params().get(position, None)
         if not eval_params:
-            raise TucanException(
+            raise ToucanException(
                 f"Problems retrieving evaluation parameters for '{discipline.name}' in position '{position}'."  # noqa : E501
             )
 
         # Do a quick check to see if the sizes of eval_params and marks are the same
         if len(eval_params) != len(marks):
-            raise TucanException(
+            raise ToucanException(
                 f"Evaluation parameters for '{discipline.name}' in position '{position}' do not match the marks given."  # noqa : E501
             )
 
         # Compute the amount of points received and store them
         self._points.append(sum([eval * mark for eval, mark in zip(eval_params, marks)]))
 
-    def get_team_score_contribution(self, marks: List[int], discipline: TucanDiscipline) -> int:
+    def get_team_score_contribution(self, marks: List[int], discipline: ToucanDiscipline) -> int:
         """Retrieve the score contribution of a player in a match.
 
         Parameters
         ----------
         evaluation : List[int]
             Marks obtained during the match.
-        discipline : TucanDiscipline
+        discipline : ToucanDiscipline
             Sports discipline in which the marks were obtained.
 
         Returns

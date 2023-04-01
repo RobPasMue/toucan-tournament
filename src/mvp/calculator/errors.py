@@ -1,12 +1,12 @@
 """Module containing potential errors to be raised by the
-Tucan Tournament MVP calculator library."""
+Toucan Tournament MVP calculator library."""
 
 
-class TucanException(Exception):
-    """Specific Tucan exception class."""
+class ToucanException(Exception):
+    """Specific Toucan exception class."""
 
     def __init__(self, msg=""):
-        """Constructor for ``TucanException``.
+        """Constructor for ``ToucanException``.
 
         Parameters
         ----------

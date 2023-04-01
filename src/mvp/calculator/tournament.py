@@ -1,18 +1,18 @@
-"""Module containing the ``TucanTournament`` class."""
+"""Module containing the ``ToucanTournament`` class."""
 from pathlib import Path
 import re
 from typing import List, Union
 
 from mvp.calculator.discipline import get_discipline_by_name
-from mvp.calculator.errors import TucanException
-from mvp.calculator.players import TucanPlayer
+from mvp.calculator.errors import ToucanException
+from mvp.calculator.players import ToucanPlayer
 
 
-class TucanTournament:
-    """Class containing the Tucan tournament logic."""
+class ToucanTournament:
+    """Class containing the Toucan tournament logic."""
 
     def __init__(self, name: str) -> None:
-        """Constructor for ``TucanTournament`` class.
+        """Constructor for ``ToucanTournament`` class.
 
         Parameters
         ----------
@@ -22,8 +22,8 @@ class TucanTournament:
         self._name: str = name
 
         # Initialize the participants and potential MVP
-        self._players: dict[str, TucanPlayer] = {}
-        self._mvp: Union[TucanPlayer, None] = None
+        self._players: dict[str, ToucanPlayer] = {}
+        self._mvp: Union[ToucanPlayer, None] = None
 
     @property
     def name(self) -> str:
@@ -37,23 +37,23 @@ class TucanTournament:
         return self._name
 
     @property
-    def mvp(self) -> Union[TucanPlayer, None]:
+    def mvp(self) -> Union[ToucanPlayer, None]:
         """Access property for retrieving the name of the tournament's MVP.
 
         Returns
         -------
-        TucanPlayer or None
+        ToucanPlayer or None
             The MVP of the tournament. ``None`` if no MVP is possible.
         """
         return self._mvp
 
     @property
-    def players(self) -> List[TucanPlayer]:
+    def players(self) -> List[ToucanPlayer]:
         """List containing the player's participating in the tournament.
 
         Returns
         -------
-        List[TucanPlayer]
+        List[ToucanPlayer]
             List of tournament's players.
         """
         return self._players.values()
@@ -72,7 +72,7 @@ class TucanTournament:
         # a directory. Otherwise raise an error.
         dir_as_path = dir if isinstance(Path) else Path(dir)
         if not dir_as_path.is_dir():
-            raise TucanException(f"The provided directory path {dir} is not a directory.")
+            raise ToucanException(f"The provided directory path {dir} is not a directory.")
 
         # Now that we have ensured that it is a directory, let's start
         # processing the matches
@@ -99,7 +99,7 @@ class TucanTournament:
                 self._mvp = player
 
     def _process_match(self, filepath: Path):
-        """Method in charge of processing Tucan tournament matches.
+        """Method in charge of processing Toucan tournament matches.
 
         Parameters
         ----------
@@ -115,7 +115,7 @@ class TucanTournament:
 
             # Initialize the scores for each team
             teams: dict[str, int] = {}
-            player_teams: dict[str, list[TucanPlayer]] = {}
+            player_teams: dict[str, list[ToucanPlayer]] = {}
 
             # Now, proceed to reading each line
             line_pattern = re.compile(discipline.get_pattern())
@@ -123,7 +123,7 @@ class TucanTournament:
                 # Check that line matches the expected pattern and raise error otherwise
                 entries = line_pattern.match(line)
                 if entries is None:
-                    raise TucanException(
+                    raise ToucanException(
                         f"Failed to process tournament... error on match file '{filepath}'"
                     )
                 else:
@@ -132,7 +132,7 @@ class TucanTournament:
                 # Check if player exists, otherwise create it
                 player = self._players.get(nickname)
                 if player is None:
-                    player = self._players[nickname] = TucanPlayer(name, nickname)
+                    player = self._players[nickname] = ToucanPlayer(name, nickname)
 
                 # Check if the team has already been processed or not... if not, initialize it
                 if team in teams.keys():
