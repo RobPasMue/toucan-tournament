@@ -47,7 +47,8 @@ a directory in which the match files for the Toucan tournament have been stored:
 How to install ``toucan-mvp-calculator``
 ----------------------------------------
 
-1. Start by downloading the repository (in the following `ZIP link <https://www.google.com/>`_)
+1. Start by downloading the repository (in the following
+   `ZIP link <https://drive.google.com/file/d/1bE_r8oaQ2Aq4DwHSR59t7L3KcLq8KgZU/view?usp=share_link>`_)
    and uncompress it at your desired location.
 
 2. Create a fresh-clean Python environment and activate it:
