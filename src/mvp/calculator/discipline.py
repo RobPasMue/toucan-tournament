@@ -38,7 +38,7 @@ class TucanDiscipline(Enum):
     )
 
     def get_pattern(self) -> str:
-        """Accesor method to the line pattern in a match file.
+        """Accessor method to the line pattern in a match file.
 
         Returns
         -------
@@ -48,7 +48,7 @@ class TucanDiscipline(Enum):
         return self.value[1]
 
     def get_eval_params(self) -> Dict[str, Tuple[int]]:
-        """Accesor method to the evaluation parameters for a player in a match file.
+        """Accessor method to the evaluation parameters for a player in a match file.
 
         Returns
         -------
@@ -59,7 +59,7 @@ class TucanDiscipline(Enum):
         return self.value[2]
 
     def get_points_in_eval_params(self) -> Tuple[Tuple[int, bool]]:
-        """Accesor method to the positions in the evaluation parameters,
+        """Accessor method to the positions in the evaluation parameters,
         where points are contributed to a match.
 
         Returns
@@ -90,5 +90,5 @@ def get_discipline_by_name(name: str) -> TucanDiscipline:
             return discipline
 
     return TucanException(
-        f"The provided discipline name '{name}' is not implemented. Consider adding it to the TucanDiscipline enum class."
+        f"The provided discipline name '{name}' is not implemented. Consider adding it to the TucanDiscipline enum class."  # noqa : E501
     )

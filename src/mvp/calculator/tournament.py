@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 from typing import List, Union
 
-from mvp.calculator.discipline import TucanDiscipline, get_discipline_by_name
+from mvp.calculator.discipline import get_discipline_by_name
 from mvp.calculator.errors import TucanException
 from mvp.calculator.players import TucanPlayer
 

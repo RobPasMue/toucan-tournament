@@ -86,20 +86,20 @@ class TucanPlayer:
         eval_params = discipline.get_eval_params().get(position, None)
         if not eval_params:
             raise TucanException(
-                f"Problems retrieving evaluation parameters for '{discipline.name}' in position '{position}'."
+                f"Problems retrieving evaluation parameters for '{discipline.name}' in position '{position}'."  # noqa : E501
             )
 
         # Do a quick check to see if the sizes of eval_params and marks are the same
         if len(eval_params) != len(marks):
             raise TucanException(
-                f"Evaluation parameters for '{discipline.name}' in position '{position}' do not match the marks given."
+                f"Evaluation parameters for '{discipline.name}' in position '{position}' do not match the marks given."  # noqa : E501
             )
 
         # Compute the amount of points received and store them
         self._points.append(sum([eval * mark for eval, mark in zip(eval_params, marks)]))
 
     def get_team_score_contribution(self, marks: List[int], discipline: TucanDiscipline) -> int:
-        """Retreive the score contribution of a player in a match.
+        """Retrieve the score contribution of a player in a match.
 
         Parameters
         ----------
@@ -113,7 +113,7 @@ class TucanPlayer:
         int
             Score contributed to the team's result.
         """
-        # Get tthe score contribution for a given discipline
+        # Get the score contribution for a given discipline
         score_eval_params = discipline.get_points_in_eval_params()
 
         # Compute the contribution to the team's score
