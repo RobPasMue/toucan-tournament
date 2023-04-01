@@ -16,6 +16,11 @@ class ToucanDiscipline(Enum):
     follows:
         * Enum ID.
         * Regex for processing each player's contribution in a match.
+          Assumed conditions:
+          - Name, nickname and team name can be anything.
+          - Match statistics (scores, rebounds etc.) MUST be a number.
+          - Player number MUST be a number.
+          - Player position MUST be a letter.
         * Dictionary containing the "evaluation" as a function of the position.
         * Location in which the points are stored inside the evaluation and whether
           the points contributed are considered as an addition or subtraction
@@ -26,14 +31,14 @@ class ToucanDiscipline(Enum):
     # TODO: force regex to be numbers or letters
     BASKETBALL = (
         0,
-        r"^(.*);(.*);(.*);(.*);(.*);(.*);(.*);(.*)$",
+        r"^(.*);(.*);([0-9]*);(.*);([a-zA-Z]*);([0-9]*);([0-9]*);([0-9]*)$",
         {"G": (2, 3, 1), "F": (2, 2, 2), "C": (2, 1, 3)},
         ((0, True),),
         {"G": 0, "F": 0, "C": 0},
     )
     HANDBALL = (
         1,
-        r"^(.*);(.*);(.*);(.*);(.*);(.*);(.*)$",
+        r"^(.*);(.*);([0-9]*);(.*);([a-zA-Z]*);([0-9]*);([0-9]*)$",
         {"G": (5, -2), "F": (1, -1)},
         (
             (0, True),
