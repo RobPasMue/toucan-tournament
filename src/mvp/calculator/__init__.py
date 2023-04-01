@@ -1,5 +1,4 @@
-"""Pythonic library used for computing the Most Valuable Player (MVP)
-of the Toucan Tournament."""
+"""Pythonic library used for computing the Most Valuable Player (MVP) of the Toucan Tournament."""
 
 # Version
 # ------------------------------------------------------------------------------

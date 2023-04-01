@@ -10,7 +10,7 @@ class ToucanPlayer:
     """Class representing a player of Toucan tournament sport."""
 
     def __init__(self, name: str, nickname: str) -> None:
-        """Constructor for ``ToucanPlayer`` class.
+        """Instantiate ``ToucanPlayer`` object.
 
         Parameters
         ----------
@@ -70,7 +70,11 @@ class ToucanPlayer:
     def add_match_points(
         self, marks: List[int], discipline: ToucanDiscipline, position: str
     ) -> None:
-        """Computes the number of points acquired in a match and stores them
+        """Compute and add the number of points acquired in a match.
+
+        Notes
+        -----
+        Computes the number of points and stores them
         inside the player's record track (i.e. self._points).
 
         Parameters
@@ -129,5 +133,5 @@ class ToucanPlayer:
         return contrib
 
     def add_bonus_points(self) -> None:
-        """Adds bonus points (i.e. 10) to the last match the player has played."""
+        """Add bonus points (i.e. 10) to the last match the player has played."""
         self._points[-1] = self._points[-1] + 10

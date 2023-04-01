@@ -12,7 +12,7 @@ class ToucanTournament:
     """Class containing the Toucan tournament logic."""
 
     def __init__(self, name: str) -> None:
-        """Constructor for ``ToucanTournament`` class.
+        """Instantiate ``ToucanTournament`` onject.
 
         Parameters
         ----------
@@ -59,15 +59,13 @@ class ToucanTournament:
         return self._players.values()
 
     def process_tournament(self, dir: Union[Path, str]) -> None:
-        """Method for processing a tournament given a directory where
-        the match files are located
+        """Process a tournament given a directory where the match files are located.
 
         Parameters
         ----------
         dir : Path or str
             Directory where the match files are located.
         """
-
         # First of all, check that the provided argument is actually
         # a directory. Otherwise raise an error.
         dir_as_path = dir if isinstance(Path) else Path(dir)
@@ -99,7 +97,7 @@ class ToucanTournament:
                 self._mvp = player
 
     def _process_match(self, filepath: Path):
-        """Method in charge of processing Toucan tournament matches.
+        """Process Toucan tournament match file.
 
         Parameters
         ----------

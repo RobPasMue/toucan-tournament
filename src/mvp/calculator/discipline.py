@@ -1,5 +1,4 @@
-"""Module defining the different disciplines ran in the Toucan Tournament
-and auxiliary methods."""
+"""Module defining the disciplines ran in the Toucan Tournament and auxiliary methods."""
 
 from enum import Enum
 from typing import Dict, Tuple
@@ -59,8 +58,7 @@ class ToucanDiscipline(Enum):
         return self.value[2]
 
     def get_points_in_eval_params(self) -> Tuple[Tuple[int, bool]]:
-        """Accessor method to the positions in the evaluation parameters,
-        where points are contributed to a match.
+        """Accessor method to the positions in the evaluation parameters.
 
         Returns
         -------
@@ -73,7 +71,7 @@ class ToucanDiscipline(Enum):
 
 
 def get_discipline_by_name(name: str) -> ToucanDiscipline:
-    """Method for returning the ToucanDiscipline enum class.
+    """Return the ToucanDiscipline enum class corresponding to a given name.
 
     Parameters
     ----------
