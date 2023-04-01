@@ -39,3 +39,9 @@ software code implemented.
 Since the language of choice is Python, and there is no need to implement databases
 (i.e. simple processing script) the most ideal solution might be the usage of a
 dictionary in which the keys are the player's nicknames (i.e. unique identifiers).
+
+## Missing tasks
+
+- [ ] Finish up main README
+- [ ] More robust regex pattern
+- [ ] Send over practical resolution
