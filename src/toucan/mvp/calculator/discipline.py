@@ -20,6 +20,7 @@ class ToucanDiscipline(Enum):
         * Location in which the points are stored inside the evaluation and whether
           the points contributed are considered as an addition or subtraction
           (e.g. goal made or goal received).
+        * Extra rating points (e.g. initial).
     """
 
     # TODO: force regex to be numbers or letters
@@ -27,13 +28,18 @@ class ToucanDiscipline(Enum):
         0,
         r"^(.*);(.*);(.*);(.*);(.*);(.*);(.*);(.*)$",
         {"G": (2, 3, 1), "F": (2, 2, 2), "C": (2, 1, 3)},
-        ((0, True)),
+        ((0, True),),
+        {"G": 0, "F": 0, "C": 0},
     )
     HANDBALL = (
         1,
         r"^(.*);(.*);(.*);(.*);(.*);(.*);(.*);(.*)$",
-        {"G": (50, 5, -2), "F": (20, 1, -1)},
-        ((1, True), (2, False)),
+        {"G": (5, -2), "F": (1, -1)},
+        (
+            (0, True),
+            (1, False),
+        ),
+        {"G": 50, "F": 20},
     )
 
     def get_pattern(self) -> str:
@@ -68,6 +74,17 @@ class ToucanDiscipline(Enum):
             as an addition to the team's score os a subtraction.
         """
         return self.value[3]
+
+    def get_extra_points(self) -> Dict[str, int]:
+        """Accessor method to the extra rating points for a player in a match file.
+
+        Returns
+        -------
+        Dict[str, int]
+            Dictionary containing the extra rating points as a
+            function of the position.
+        """
+        return self.value[4]
 
 
 def get_discipline_by_name(name: str) -> ToucanDiscipline:

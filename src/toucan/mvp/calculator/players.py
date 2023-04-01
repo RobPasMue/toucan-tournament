@@ -43,7 +43,7 @@ class ToucanPlayer:
         str
             The nickname of the player.
         """
-        return self._name
+        return self._nickname
 
     @property
     def points(self) -> List[int]:
@@ -101,6 +101,11 @@ class ToucanPlayer:
 
         # Compute the amount of points received and store them
         self._points.append(sum([eval * mark for eval, mark in zip(eval_params, marks)]))
+
+        # Get extra rating points if any
+        extra_points = discipline.get_extra_points().get(position, None)
+        if extra_points:
+            self._points[-1] = self._points[-1] + extra_points
 
     def get_team_score_contribution(self, marks: List[int], discipline: ToucanDiscipline) -> int:
         """Retrieve the score contribution of a player in a match.
