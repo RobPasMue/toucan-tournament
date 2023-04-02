@@ -92,4 +92,4 @@ jobs:
         uses: pyansys/actions/doc-deploy-dev@v4
         with:
           cname: 'robpasmue.github.io/toucan-tournament'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOY_DOCS_PAT }}
