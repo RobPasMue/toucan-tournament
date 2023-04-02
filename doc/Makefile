@@ -23,3 +23,7 @@ help:
 clean:
 	rm -rf $(BUILDDIR)/*
 	find . -type d -name "_autosummary" -exec rm -rf {} +
+
+pdf:
+	mkdir -p $(BUILDDIR)/latex
+	touch $(BUILDDIR)/latex/empty.pdf
