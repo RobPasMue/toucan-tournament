@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Code style checks
-        uses: pyansys/actions/code-style@v3
+        uses: pyansys/actions/code-style@v4
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -53,7 +53,7 @@ jobs:
     steps:
 
       - name: Build documentation
-        uses: pyansys/actions/doc-build@v3
+        uses: pyansys/actions/doc-build@v4
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -67,7 +67,7 @@ jobs:
         python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
     steps:
       - name: Run unit tests
-        uses: pyansys/actions/tests-pytest@v3
+        uses: pyansys/actions/tests-pytest@v4
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -77,7 +77,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build library source and wheel artifacts
-        uses: pyansys/actions/build-library@v3
+        uses: pyansys/actions/build-library@v4
         with:
           library-name: ${{ env.PACKAGE_NAME }}
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
@@ -89,7 +89,7 @@ jobs:
     needs: [ package ]
     steps:
       - name: Deploy the latest documentation
-        uses: pyansys/actions/doc-deploy-dev@v3
+        uses: pyansys/actions/doc-deploy-dev@v4
         with:
           cname: 'robpasmue.github.io/toucan-tournament'
           token: ${{ secrets.GITHUB_TOKEN }}
