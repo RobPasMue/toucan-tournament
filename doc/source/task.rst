@@ -113,17 +113,3 @@ We are interested in how you structure your code so that it's easily extendable,
 complies with best practices for the language used, and is easy to modify /understand by others.
 
 We are also interested in seeing how efficient the algorithm you implement is.
-
-Hand in
-=======
-
-Hand in your solution along with any notes, comments, and assumptions you have made
-while working on the solution via e-mail to the recruiter who sent you this test.
-
-Usually, mail clients block executable files or with code, so, for sharing the code
-with the recruiter, a cloud tool should be used. We need a PUBLIC link
-(reviewers will download it) with the zip file. If you don't have services
-like google drive, we recommend https://wetransfer.com/, with a couple of clicks
-you can get a public download URL with your ZIP file.
-
-Do not publish the problem description or the solution you implement.
