@@ -55,36 +55,36 @@ How to install ``toucan-mvp-calculator``
 
     .. code:: bash
 
-        # Create a virtual environment
-        python -m venv .venv
+       # Create a virtual environment
+       python -m venv .venv
 
-        # Activate it in a POSIX system
-        source .venv/bin/activate
+       # Activate it in a POSIX system
+       source .venv/bin/activate
 
-        # Activate it in Windows CMD environment
-        .venv\Scripts\activate.bat
+       # Activate it in Windows CMD environment
+       .venv\Scripts\activate.bat
 
-        # Activate it in Windows Powershell
-        .venv\Scripts\Activate.ps1
+       # Activate it in Windows Powershell
+       .venv\Scripts\Activate.ps1
 
 3. Make sure you have the latest required build system and tools:
 
     .. code:: bash
 
-        python -m pip install -U pip
+       python -m pip install -U pip
 
 4. Install the project in editable mode from the root of the uncompressed directory:
 
     .. code:: bash
     
-        python -m pip install -e .
+       python -m pip install -e .
 
 5. **EXTRA**: you can also install the test and documentation build
    requirements by running instead the following:
 
     .. code:: bash
 
-        python -m pip install -e .[tests,doc]
+       python -m pip install -e .[tests,doc]
 
 How to run the tests
 --------------------
@@ -97,11 +97,11 @@ If you want to run the tests, just do as follows:
 
 .. code:: bash
 
-    # Install the library with tests requirements
-    pip install -e .[tests]
+   # Install the library with tests requirements
+   pip install -e .[tests]
 
-    # Launch the test suite
-    pytest
+   # Launch the test suite
+   pytest
 
 
 Currently, the status of the code coverage is as follows::
@@ -127,16 +127,16 @@ directory of the repository:
 .. code:: bash
 
    # Install the library with doc requirements
-    pip install -e .[doc]
+   pip install -e .[doc]
 
-    # Navigate to the documentation directory
-    cd doc
+   # Navigate to the documentation directory
+   cd doc
 
-    # On Linux, run
-    make html
+   # On Linux, run
+   make html
 
-    # On Windows, run
-    .\make.bat html
+   # On Windows, run
+   .\make.bat html
 
 After the build completes the HTML documentation locates itself in the
 ``_builds/html`` directory and you can load the ``index.html`` into a web
@@ -144,11 +144,11 @@ browser. To clean the documentation you can execute this command:
 
 .. code:: bash
 
-    # On Linux, run
-    make clean
+   # On Linux, run
+   make clean
 
-    # On Windows, run
-    .\make.bat clean
+   # On Windows, run
+   .\make.bat clean
 
 
 Code style
@@ -176,45 +176,3 @@ Its current status is as follows::
   flake8...................................................................Passed
   codespell................................................................Passed
   pydocstyle...............................................................Passed
-
-.. ## Code Test - Toucan Tournament
-
-.. ### **Task**
-
-.. Toucan Tournament is a tournament where several players compete in
-.. several sports.
-
-.. **Facts**
-.. - Right now, the sports played are basketball and handball matches.
-..   They plan to add more sports in the future.
-.. - You have been contacted to create a program to calculate the Most
-..   Valuable Player (MVP) of the tournament.
-.. - You will receive a set of files, each one containing the stats of one
-..   match. Each file will start with a row indicating the sport it refers to.
-.. - Each player is assigned a unique nickname.
-.. - Each file represent a single match.
-.. - The MVP is the player with the most rating points, adding the rating points in all matches.
-.. - A player will receive 10 additional rating points if their team won the match.
-.. - Every match must have a winner team. One player may play in different teams and
-..   positions in different matches, but not in the same match.
-.. - The program responsible of generating the files has a bug, that can
-..   be reflected in wrong files format. If one file is wrong, the whole set of files
-..   is considered to be wrong and the MVP won't be calculated.
-
-.. ## Thoughts
-
-.. From the previous condition, it is clear that the main target of the tournament is
-.. selecting which is the MVP. Also, players are allowed to participate in different
-.. teams and different matches in fact, meaning that teams and matches are not good
-.. elections for unique identifiers. Players must be the unique identifiers of the
-.. software code implemented.
-
-.. Since the language of choice is Python, and there is no need to implement databases
-.. (i.e. simple processing script) the most ideal solution might be the usage of a
-.. dictionary in which the keys are the player's nicknames (i.e. unique identifiers).
-
-.. ## Missing tasks
-
-.. - [ ] Finish up main README
-.. - [ ] More robust regex pattern
-.. - [ ] Send over practical resolution
