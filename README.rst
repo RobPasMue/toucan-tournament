@@ -13,7 +13,7 @@ Toucan tournament MVP calculator
    :target: https://github.com/psf/black
 
 This is a coding test resolution provided by `Roberto Pastor Muela <https://www.linkedin.com/robertopastormuela>`_
-for Telefónica. This technical practical has been approached by the creation of a Python library
+for a technical practical. This technical practical has been approached by the creation of a Python library
 named ``toucan-mvp-calculator``, which can easily be extended and reused for similar tournaments.
 
 Simple example
