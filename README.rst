@@ -53,38 +53,38 @@ How to install ``toucan-mvp-calculator``
 
 2. Create a fresh-clean Python environment and activate it:
 
-    .. code:: bash
+   .. code:: bash
 
-       # Create a virtual environment
-       python -m venv .venv
+      # Create a virtual environment
+      python -m venv .venv
 
-       # Activate it in a POSIX system
-       source .venv/bin/activate
+      # Activate it in a POSIX system
+      source .venv/bin/activate
 
-       # Activate it in Windows CMD environment
-       .venv\Scripts\activate.bat
+      # Activate it in Windows CMD environment
+      .venv\Scripts\activate.bat
 
-       # Activate it in Windows Powershell
-       .venv\Scripts\Activate.ps1
+      # Activate it in Windows Powershell
+      .venv\Scripts\Activate.ps1
 
 3. Make sure you have the latest required build system and tools:
 
-    .. code:: bash
+   .. code:: bash
 
-       python -m pip install -U pip
+      python -m pip install -U pip
 
 4. Install the project in editable mode from the root of the uncompressed directory:
 
-    .. code:: bash
+   .. code:: bash
     
-       python -m pip install -e .
+      python -m pip install -e .
 
 5. **EXTRA**: you can also install the test and documentation build
    requirements by running instead the following:
 
-    .. code:: bash
+   .. code:: bash
 
-       python -m pip install -e .[tests,doc]
+      python -m pip install -e .[tests,doc]
 
 How to run the tests
 --------------------
