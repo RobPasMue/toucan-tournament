@@ -12,7 +12,7 @@ Toucan tournament MVP calculator
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=flat
    :target: https://github.com/psf/black
 
-This is a coding test resolution provided by `Roberto Pastor Muela <https://www.linkedin.com/robertopastormuela>`_
+This is a coding test resolution provided by `Roberto Pastor Muela <https://www.linkedin.com/in/robertopastormuela/>`_
 for a technical practical. This technical practical has been approached by the creation of a Python library
 named ``toucan-mvp-calculator``, which can easily be extended and reused for similar tournaments.
 
