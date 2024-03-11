@@ -56,7 +56,7 @@ jobs:
         uses: ansys/actions/doc-build@v5
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
-          sphinxopts: '-j 0 -W --keep-going'
+          sphinxopts: '-j 1 -W --keep-going'
 
   testing:
     name: Run unit tests
