@@ -1,0 +1,50 @@
+toucan.mvp.calculator.errors
+============================
+
+.. py:module:: toucan.mvp.calculator.errors
+
+.. autoapi-nested-parse::
+
+   Module containing errors to be raised by the Toucan Tournament MVP calculator library.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Exceptions
+----------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.errors.ToucanException
+
+
+Module Contents
+---------------
+
+.. py:exception:: ToucanException(msg='')
+
+   Bases: :py:obj:`Exception`
+
+
+   
+   Specific Toucan exception class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
