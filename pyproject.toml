@@ -35,7 +35,7 @@ tests = [
 ]
 doc = [
     "pydata-sphinx-theme==0.15.4",
-    "numpydoc==1.7.0",
+    "numpydoc==1.8.0",
     "Sphinx==8.0.2",
     "sphinx-autoapi==3.2.1",
     "Sphinx-copybutton==0.5.2",
