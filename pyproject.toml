@@ -34,7 +34,7 @@ tests = [
     "pytest-cov==5.0.0",
 ]
 doc = [
-    "pydata-sphinx-theme==0.15.4",
+    "pydata-sphinx-theme==0.16.0",
     "numpydoc==1.8.0",
     "Sphinx==8.1.3",
     "sphinx-autoapi==3.3.2",
