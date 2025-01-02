@@ -1,0 +1,231 @@
+toucan.mvp.calculator.discipline
+================================
+
+.. py:module:: toucan.mvp.calculator.discipline
+
+.. autoapi-nested-parse::
+
+   Module defining the disciplines ran in the Toucan Tournament and auxiliary methods.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.discipline.ToucanDiscipline
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.discipline.get_discipline_by_name
+
+
+Module Contents
+---------------
+
+.. py:class:: ToucanDiscipline(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   
+   Provides an enum holding the different disciplines available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .. rubric:: Notes
+
+   The pattern on how to process each line of the files for each
+   discipline match is stored here. The values in each enum are as
+   follows:
+
+   1. Enum ID.
+   2. Regex for processing each player's contribution in a match.
+      Assumed conditions:
+
+       * Name, nickname and team name can be anything.
+       * Match statistics (scores, rebounds etc.) MUST be a number.
+       * Player number MUST be a number.
+       * Player position MUST be a letter.
+
+   3. Dictionary containing the "evaluation" as a function of the position.
+   4. Location in which the points are stored inside the evaluation and whether
+      the points contributed are considered as an addition or subtraction
+      (e.g. goal made or goal received).
+   5. Extra rating points (e.g. initial).
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+   .. py:attribute:: BASKETBALL
+
+
+   .. py:attribute:: HANDBALL
+
+
+   .. py:method:: get_pattern() -> str
+
+      
+      Accessor method to the line pattern in a match file.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:str`
+              The regex expression for a match line.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: get_eval_params() -> Dict[str, Tuple[int]]
+
+      
+      Accessor method to the evaluation parameters for a player in a match file.
+
+
+
+
+
+      :Returns:
+
+          :obj:`Dict`\[:class:`python:str`, :obj:`Tuple`\[:class:`python:int`]]
+              Dictionary containing the evaluation parameters as a
+              function of the position.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: get_points_in_eval_params() -> Tuple[Tuple[int, bool]]
+
+      
+      Accessor method to the positions in the evaluation parameters.
+
+
+
+
+
+      :Returns:
+
+          :obj:`Tuple`\[:obj:`Tuple`\[:class:`python:int`, :ref:`bool <python:bltin-boolean-values>`]]
+              Tuple of tuples, where each subtuple indicates the location
+              where points are contributed and whether they should be considered
+              as an addition to the team's score os a subtraction.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: get_extra_points() -> Dict[str, int]
+
+      
+      Accessor method to the extra rating points for a player in a match file.
+
+
+
+
+
+      :Returns:
+
+          :obj:`Dict`\[:class:`python:str`, :class:`python:int`]
+              Dictionary containing the extra rating points as a
+              function of the position.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+.. py:function:: get_discipline_by_name(name: str) -> ToucanDiscipline
+
+   
+   Return the ToucanDiscipline enum class corresponding to a given name.
+
+
+   :Parameters:
+
+       **name** : :class:`python:str`
+           The name of the discipline.
+
+
+
+   :Returns:
+
+       :obj:`ToucanDiscipline`
+           The ToucanDiscipline enum.
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+

@@ -1,0 +1,292 @@
+toucan.mvp.calculator.players
+=============================
+
+.. py:module:: toucan.mvp.calculator.players
+
+.. autoapi-nested-parse::
+
+   Module contaiming the ``Player`` class and auxiliary methods related to them.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.players.ToucanPlayer
+
+
+Module Contents
+---------------
+
+.. py:class:: ToucanPlayer(name: str, nickname: str)
+
+   
+   Class representing a player of Toucan tournament sport.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+   .. py:property:: name
+      :type: str
+
+
+      
+      Access property for retrieving the name of the player.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:str`
+              The name of the player.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:property:: nickname
+      :type: str
+
+
+      
+      Access property for retrieving the nickname of the player.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:str`
+              The nickname of the player.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:property:: points
+      :type: List[int]
+
+
+      
+      Access property for retrieving the points of the player.
+
+
+
+
+
+      :Returns:
+
+          :obj:`List`\[:class:`python:int`]
+              The list of points acquired per match.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:property:: total_points
+      :type: int
+
+
+      
+      Total number of points obtained by a player.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:int`
+              Total number of points.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: add_match_points(marks: List[int], discipline: toucan.mvp.calculator.discipline.ToucanDiscipline, position: str) -> None
+
+      
+      Compute and add the number of points acquired in a match.
+
+
+      :Parameters:
+
+          **evaluation** : :obj:`List`\[:class:`python:int`]
+              Marks obtained during the match.
+
+          **discipline** : :obj:`ToucanDiscipline`
+              Sports discipline in which the marks were obtained.
+
+          **position** : :class:`python:str`
+              Player's position in the match.
+
+
+
+
+
+
+
+
+
+
+
+      .. rubric:: Notes
+
+      Computes the number of points and stores them
+      inside the player's record track (i.e. self._points).
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: get_team_score_contribution(marks: List[int], discipline: toucan.mvp.calculator.discipline.ToucanDiscipline) -> int
+
+      
+      Retrieve the score contribution of a player in a match.
+
+
+      :Parameters:
+
+          **evaluation** : :obj:`List`\[:class:`python:int`]
+              Marks obtained during the match.
+
+          **discipline** : :obj:`ToucanDiscipline`
+              Sports discipline in which the marks were obtained.
+
+
+
+      :Returns:
+
+          :class:`python:int`
+              Score contributed to the team's result.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: add_bonus_points() -> None
+
+      
+      Add bonus points (i.e. 10) to the last match the player has played.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: __str__() -> str
+
+      
+      Represent player information as string.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:str`
+              String representation of the player.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+

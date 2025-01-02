@@ -1,0 +1,165 @@
+toucan.mvp.calculator.tournament
+================================
+
+.. py:module:: toucan.mvp.calculator.tournament
+
+.. autoapi-nested-parse::
+
+   Module containing the ``ToucanTournament`` class.
+
+   ..
+       !! processed by numpydoc !!
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.tournament.ToucanTournament
+
+
+Module Contents
+---------------
+
+.. py:class:: ToucanTournament(name: str)
+
+   
+   Class containing the Toucan tournament logic.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+   .. py:property:: name
+      :type: str
+
+
+      
+      Access property for retrieving the name of the tournament.
+
+
+
+
+
+      :Returns:
+
+          :class:`python:str`
+              The name of the tournament.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:property:: mvp
+      :type: Union[toucan.mvp.calculator.players.ToucanPlayer, None]
+
+
+      
+      Access property for retrieving the name of the tournament's MVP.
+
+
+
+
+
+      :Returns:
+
+          :obj:`ToucanPlayer` or :data:`python:None`
+              The MVP of the tournament. ``None`` if no MVP is possible.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:property:: players
+      :type: List[toucan.mvp.calculator.players.ToucanPlayer]
+
+
+      
+      List containing the player's participating in the tournament.
+
+
+
+
+
+      :Returns:
+
+          :obj:`List`\[:obj:`ToucanPlayer`]
+              List of tournament's players.
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+
+   .. py:method:: process_tournament(dir: Union[pathlib.Path, str]) -> None
+
+      
+      Process a tournament given a directory where the match files are located.
+
+
+      :Parameters:
+
+          **dir** : :obj:`Path` or :class:`python:str`
+              Directory where the match files are located.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ..
+          !! processed by numpydoc !!
+
+

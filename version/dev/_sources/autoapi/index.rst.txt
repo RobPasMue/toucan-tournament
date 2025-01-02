@@ -1,0 +1,11 @@
+.. _ref_api_reference:
+
+API reference
+=============
+
+This page contains the ``toucan-mvp-calculator`` API reference.
+
+.. toctree::
+   :titlesonly:
+
+   /autoapi/toucan/mvp/calculator/index
