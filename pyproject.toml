@@ -55,6 +55,11 @@ line_length = 100
 default_section = "THIRDPARTY"
 src_paths = ["doc", "src", "tests"]
 
+[tool.codespell]
+skip = '*.toml'
+count = true
+quiet-level = 3
+
 [tool.coverage.run]
 source = ["toucan.mvp.calculator"]
 
