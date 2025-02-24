@@ -38,7 +38,7 @@ doc = [
     "pydata-sphinx-theme==0.16.1",
     "numpydoc==1.8.0",
     "Sphinx==8.2.1",
-    "sphinx-autoapi==3.5.0",
+    "sphinx-autoapi==3.6.0",
     "Sphinx-copybutton==0.5.2",
 ]
 
