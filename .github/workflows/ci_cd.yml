@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Code style checks
-        uses: ansys/actions/code-style@v8
+        uses: ansys/actions/code-style@v10
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -39,7 +39,7 @@ jobs:
         python-version: ['3.10', '3.11', '3.12', '3.13']
 
     steps:
-      - uses: ansys/actions/build-wheelhouse@v8
+      - uses: ansys/actions/build-wheelhouse@v10
         with:
           library-name: ${{ env.PACKAGE_NAME }}
           library-namespace: ${{ env.PACKAGE_NAMESPACE }}
@@ -53,7 +53,7 @@ jobs:
     steps:
 
       - name: Build documentation
-        uses: ansys/actions/doc-build@v8
+        uses: ansys/actions/doc-build@v10
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           sphinxopts: '-j 1 -W --keep-going'
@@ -68,7 +68,7 @@ jobs:
         python-version: ['3.10', '3.11', '3.12', '3.13']
     steps:
       - name: Run unit tests
-        uses: ansys/actions/tests-pytest@v8
+        uses: ansys/actions/tests-pytest@v10
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build library source and wheel artifacts
-        uses: ansys/actions/build-library@v8
+        uses: ansys/actions/build-library@v10
         with:
           library-name: ${{ env.PACKAGE_NAME }}
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
@@ -90,7 +90,7 @@ jobs:
     needs: [ package ]
     steps:
       - name: Deploy the latest documentation
-        uses: ansys/actions/doc-deploy-dev@v8
+        uses: ansys/actions/doc-deploy-dev@v10
         with:
           cname: 'robpasmue.github.io/toucan-tournament'
           token: ${{ secrets.DEPLOY_DOCS_PAT }}
