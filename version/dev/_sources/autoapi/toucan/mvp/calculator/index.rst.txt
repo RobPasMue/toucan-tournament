@@ -1,0 +1,75 @@
+toucan.mvp.calculator
+=====================
+
+.. py:module:: toucan.mvp.calculator
+
+.. autoapi-nested-parse::
+
+   
+   Pythonic library used for computing the Most Valuable Player (MVP) of the Toucan Tournament.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/toucan/mvp/calculator/discipline/index
+   /autoapi/toucan/mvp/calculator/errors/index
+   /autoapi/toucan/mvp/calculator/players/index
+   /autoapi/toucan/mvp/calculator/tournament/index
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   toucan.mvp.calculator.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
+   
+   Toucan MVP calculator library version.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   ..
+       !! processed by numpydoc !!
+
