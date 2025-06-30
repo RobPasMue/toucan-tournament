@@ -36,7 +36,7 @@ tests = [
 doc = [
     "astroid<4",
     "pydata-sphinx-theme==0.16.1",
-    "numpydoc==1.8.0",
+    "numpydoc==1.9.0",
     "Sphinx==8.2.3",
     "sphinx-autoapi==3.6.0",
     "Sphinx-copybutton==0.5.2",
